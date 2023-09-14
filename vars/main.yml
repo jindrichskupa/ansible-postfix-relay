@@ -1,3 +1,3 @@
-postfix_relayhost_user: "{{ sendgrid_username }}"
-postfix_relayhost_pass: "{{ sendgrid_password }}"
+postfix_relayhost_user: ""
+postfix_relayhost_pass: ""
 postfix_relay_server: "smtp.sendgrid.net"
