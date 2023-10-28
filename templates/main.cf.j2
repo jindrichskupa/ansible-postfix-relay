@@ -29,8 +29,10 @@ recipient_delimiter = +
 inet_interfaces = all
 inet_protocols = all
 relayhost = [{{ postfix_relay_server }}]:587
+{% if postfix_relayhost_user %}
 smtp_sasl_auth_enable = yes
 smtp_sasl_password_maps = static:{{ postfix_relayhost_user }}:{{ postfix_relayhost_pass }}
 smtp_sasl_security_options = noanonymous
+{% endif %}
 smtp_tls_security_level = encrypt
 header_size_limit = 4096000
