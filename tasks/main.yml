@@ -20,5 +20,6 @@
       dest=/etc/postfix/main.cf
     tags:
       - postfix
+    backup: true
     notify:
       - restart_postfix
