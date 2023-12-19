@@ -16,10 +16,10 @@
 
   - name: Template postfix configuration
     template: >
-      src=main.cf.j2
-      dest=/etc/postfix/main.cf
+      src: main.cf.j2
+      dest: /etc/postfix/main.cf
+      backup: true
     tags:
       - postfix
-    backup: true
     notify:
       - restart_postfix
